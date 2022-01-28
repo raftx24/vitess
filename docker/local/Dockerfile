@@ -36,5 +36,10 @@ COPY examples/local /vt/local
 
 RUN mkdir /vt/common
 COPY examples/common /vt/common
+EXPOSE 15000 
+EXPOSE 15001
+EXPOSE 15991
+EXPOSE 15999
+EXPOSE 15306
 
 CMD cd /vt/local && ./101_initial_cluster.sh && /bin/bash
