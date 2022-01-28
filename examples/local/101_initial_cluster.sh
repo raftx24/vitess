@@ -49,3 +49,5 @@ done
 
 # start vtgate
 CELL=zone1 ./scripts/vtgate-up.sh
+
+sleep 10000
