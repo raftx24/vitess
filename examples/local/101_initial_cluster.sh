@@ -35,6 +35,10 @@ CELL=zone1 ./scripts/vtctld-up.sh
 for i in 100; do
 	CELL=zone1 TABLET_UID=$i ./scripts/mysqlctl-up.sh
 	CELL=zone1 KEYSPACE=sharded TABLET_UID=$i ./scripts/vttablet-up.sh
+done
+# start vttablets for keyspace commerce
+for i in 200; do
+	CELL=zone1 TABLET_UID=$i ./scripts/mysqlctl-up.sh
 	CELL=zone1 KEYSPACE=unsharded TABLET_UID=$i ./scripts/vttablet-up.sh
 done
 
